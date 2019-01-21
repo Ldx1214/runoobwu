@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>localtion对象</title>
+	<script type="text/javascript">
+		function assinNew(argument) {
+			window.location.assign("https://www.baidu.com")
+		}
+		function reloadCur(argument) {
+			window.location.reload();
+		}
+		function replaceNew(argument) {
+			window.localtion.replace("https://www.baidu.com")
+		}
+	</script>
+</head>
+<body>
+	<button onclick="assinNew()">assinNew重新载入新的页面</button>
+	<button onclick="reloadCur()">reloadCur重新载入当前的页面</button>
+	<button onclick="assinNew()">assinNew重新载入新的页面</button>
+</body>
+</html>
