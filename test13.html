@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>冒泡事件</title>
+	<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+</head>
+<body>
+	<ul>
+        <li>item1</li>
+        <li>item2</li>
+        <li>item3</li>
+        <li>item4</li>
+        <li>item5</li>
+        <li>item6</li>
+    </ul>
+	<script>
+		$("ul").on("mouseover",function(e){
+                $(e.target).css("background-color","#ddd").siblings().css("background-color","white");
+                // console.log(this);
+                // console.log($(this));
+                // console.log($(e.target));
+            })
+	</script>
+</body>
+</html>
