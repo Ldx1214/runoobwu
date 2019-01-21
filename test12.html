@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>冒泡</title>
+	<script src="./jquery-3.2.1.min.js"></script>
+</head>
+<body>
+	<a href="javascript:;" class="item-pic">
+	    <p class="tit">封面</p>
+	    <input type="file" name="file" style="width:50px;height:50px;display:none" >
+	</a>
+	<div class="par">
+		父节点
+		<div class="chil">
+			子节点
+		</div>
+	</div>
+<script>
+$(function(){
+    $(".item-pic").click(function(e) {    
+ 		e.stopPropagation();
+        $(this).find("input").trigger('click');
+        // $(this).next().trigger('click');
+    });
+    $('.chil').click(function(e){
+    	console.log(e);
+    	//阻止冒泡事件
+    	e.stopPropagation();
+    	alert('子节点')
+    });
+    $('.par').click(function(){
+
+    	alert('父节点')
+    });
+})
+</script>
+</body>
+</html>
